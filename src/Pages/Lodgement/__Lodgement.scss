@@ -1,0 +1,38 @@
+.container__lodgement {
+  margin: 0 auto;
+  max-width: 1400px;
+}
+
+.fullcard {
+  padding: 0px 50px;
+}
+
+.lodgementDescription {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0px 0px 0px;
+}
+
+// Responsive for small screens
+@media screen and (min-width: 1480px) {
+  .fullcard {
+    max-width: 1480px;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 985px) {
+  .fullcard {
+    padding: 20px 22px;
+  }
+
+  .lodgementDescription {
+    padding-top: 10px;
+    position: relative;
+    flex-direction: column;
+  }
+
+  .lodgementInformations {
+    flex-direction: column;
+    padding: 38px 0px 10px 0px;
+  }
+}
