@@ -6,8 +6,8 @@ export default function CardLodgement() {
   return (
     <section className="lodgementContainer">
       {LodgmentData.map((card, index) => (
-        <article>
-          <Link to={`/logements/${card.id}`}>
+        <article key = {index} >
+          <Link to ={`/logements/${card.id}`}>
             <div className="box">
               <img src={card.cover} alt={card.title} className="box__cover" />
               <h2 className="box__title">{card.title}</h2>

@@ -10,13 +10,13 @@ export default function LodgementCollapses() {
     <>
       {LodgmentData.filter((card) => card.id === params.id).map(
         (card, index) => (
-          <div className="accordions">
+          <div className="accordions" key={index}>
             <Accordion title="Description" content={card.description} />
             <Accordion
               title="Équipements"
               content=<ul>
                 {card.equipments.map((cardItem, index) => (
-                  <li>{cardItem} </li>
+                  <li key={index}>{cardItem} </li>
                 ))}
               </ul>
             />

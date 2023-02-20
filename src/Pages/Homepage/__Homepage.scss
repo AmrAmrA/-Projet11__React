@@ -42,3 +42,29 @@ header,
   max-width: 1400px;
   margin: 0 auto;
 }
+
+
+@media screen and (max-width: 980px) {
+  .background {
+    border-radius: 10px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .homepage {
+    padding: 15px;
+  }
+
+  .background {
+    margin: 0 auto 10px 0;
+    &__image {
+      height: 111px;
+    }
+
+    &__title {
+      font-size: 24px;
+      text-align: left;
+      left: 45%;
+    }
+  }
+}

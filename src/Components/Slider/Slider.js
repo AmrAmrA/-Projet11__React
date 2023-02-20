@@ -23,8 +23,8 @@ export default function Slider() {
   };
   return (
     <>
-      {LodgmentData.filter((card) => card.id === params.id).map((card, index) => (
-        <section key={index} className="slider">
+      {LodgmentData.filter((card) => card.id === params.id).map((card, key) => (
+        <section key={key} className="slider">
           {/* A ternary: Does our slider contain more than one image: display the arrows 
           otherwise do not display them  */}
           {card.pictures.length > 1 ? (
@@ -45,13 +45,13 @@ export default function Slider() {
           ) : (
             ""
           )}
-          {card.pictures.map((image, index) => {
+          {card.pictures.map((image, key) => {
             return (
               <article
-                className={index === current ? "slide active" : "slide"}
-                key={index}
+                className={key === current ? "slide active" : "slide"}
+                key={key}
               >
-                {index === current && (
+                {key === current && (
                   <img
                     src={image}
                     alt="Une série de slider pour présenter l'appartement"

@@ -12,7 +12,7 @@ export default function Homepage() {
           alt="Un arrière plan avec une mer et des rochers"
           className="background__image"
         />
-        <h1 className="background__title">Chez vous et partout ailleurs </h1>
+        <h1 className="background__title">Chez vous, et partout ailleurs </h1>
       </div>
       <CardLodgement/>
     </main>

@@ -13,7 +13,7 @@ export default function StarsRating() {
     <>
       {LodgmentData.filter((card) => card.id === params.id).map(
         (card, index) => (
-          <div className="starsList">
+          <div className="starsList" key={index}>
             {starsArray.map((index) => (
               <img
                 alt="Nombre d'étoiles pour évaluer la qualité du logement"

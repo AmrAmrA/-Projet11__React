@@ -9,10 +9,10 @@ export default function LodgementLocation() {
     <>
       {LodgmentData.filter((card) => card.id === params.id).map(
         (card, index) => (
-          <>
+          <div key = {index}>
             <h1>{card.title}</h1>
             <p>{card.location}</p>
-          </>
+          </div>
         )
       )}
     </>

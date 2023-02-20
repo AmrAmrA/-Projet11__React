@@ -9,9 +9,9 @@ export default function Tags() {
     <>
       {LodgmentData.filter((card) => card.id === params.id).map(
         (card, index) => (
-          <ul className="tagsList">
+          <ul className="tagsList"  key = {index}>
             {card.tags.map((tagsItem, index) => (
-              <li className="tagsItems"> {tagsItem} </li>
+              <li className="tagsItems" key={index}> {tagsItem} </li>
             ))}
           </ul>
         )

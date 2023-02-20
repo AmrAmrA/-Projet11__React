@@ -10,7 +10,7 @@ export default function Host() {
     <>
         {LodgmentData.filter((card) => card.id === params.id).map(
         (card, index) => (
-            <div className="name__image">
+            <div className="name__image" key={index}>
             <p>{card.host.name}</p>
             <img
               src={card.host.picture}

@@ -19,7 +19,7 @@ function Accordion({ title, content }) {
           className="accordion__icon"
         />
       </div>
-      <p className="accordion__content">{content}</p>
+      <div className="accordion__content">{content}</div>
     </div>
   );
 }
