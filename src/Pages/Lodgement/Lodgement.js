@@ -6,7 +6,7 @@ import StarsRating from "../../Components/StarsRating/StarsRating";
 import Tags from "../../Components/Tags/Tags";
 import Host from "../../Components/Host/Host";
 import LodgementLocation from "../../Components/LodgementLocation/LodgementLocation";
-import LodgementCollapses from "../../Components/LodgementCollapses/LodgementCollapses";
+import Accordion from "../../Components/Accordion/Accordion";
 import Error from "../../Pages/Error/Error";
 import "./__Lodgement.scss";
 
@@ -31,7 +31,20 @@ export default function Lodgement() {
                 <StarsRating />
               </div>
             </article>
-            <LodgementCollapses />
+          <div className="accordions">
+          <Accordion 
+           title="Équipements"
+           content=<ul>
+           {card.equipments.map((cardItem, index) => (
+             <li key={index}>{cardItem} </li>
+           ))}
+         </ul>
+           />
+           <Accordion 
+           title="Description"
+           content={card.description}
+           />
+          </div>
           </section>
         )
       )}
